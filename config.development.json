@@ -7,20 +7,17 @@
   "database": {
     "client": "sqlite3",
     "connection": {
-      "filename": "C:\\Projects\\ghostGlideDogParent\\ghostGlideDoglocal\\content\\data\\ghost-local.db"
+      "filename": "C:\\Projects\\ghostGlideDoglocal\\content\\data\\ghost-local.db"
     }
   },
   "mail": {
     "transport": "Direct"
   },
   "logging": {
-    "transports": [
-      "file",
-      "stdout"
-    ]
+    "transports": ["file", "stdout"]
   },
   "process": "local",
   "paths": {
-    "contentPath": "C:\\Projects\\ghostGlideDogParent\\ghostGlideDoglocal\\content"
+    "contentPath": "C:\\Projects\\ghostGlideDoglocal\\content"
   }
 }
