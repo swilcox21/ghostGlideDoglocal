@@ -39,21 +39,49 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-<div class="inner posts">
-    <h2 style="text-align:center">Blog Posts</h2>
-    <div class="post-feed">
-        {{#foreach posts}}
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{> "post-card"}}
-        {{/foreach}}
+    <div>
+    <h2 style="text-align:center; margin-top:50px; margin-bottom:50px;">Projects</h2>
+        <div class="post-feed inner posts">
+            {{#foreach posts}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{#has tag="project"}}
+                    {{> "post-card"}}
+                {{/has}}
+            {{/foreach}}
+        </div>
+    </div>
+    <div style="border-bottom: 1px solid grey; margin: 50px"></div>
+    <div class="inner posts">
+        <h2 style="text-align:center">Blog Posts</h2>
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{log posts}}
+                {{^has tag="project"}}
+                    {{> "post-card"}}
+                {{/has}}
+            {{/foreach}}
+        </div>
+        {{log "logging an error" level="error"}}
     </div>
     <div style="border-bottom: 1px solid grey; margin: 50px"></div>
     <h2 style="text-align:center; margin-top:100px; margin-bottom:50px;">Meet the GlideDog Team</h2>
         <a href="/bill/">
-            <div style="display: flex; justify-content: center">
+            <div style="display: flex; justify-content: center; margin-top: 25px">
                 <img style="width: 100px; margin-right: 50px;" src="https://www.w3schools.com/howto/img_avatar.png">
-                <h3 style="">Bill lastname</h3>
+                <h3 style="">Bill last name</h3>
             </div>
-    </a>
-</div>
+        </a>
+        <a href="/chaz/">
+            <div style="display: flex; justify-content: center; margin-top: 25px">
+                <img style="width: 100px; margin-right: 50px;" src="https://www.w3schools.com/howto/img_avatar.png">
+                <h3 style="">Chaz Chikeka</h3>
+            </div>
+        </a>
+        <a href="/sma/">
+            <div style="display: flex; justify-content: center; margin-top: 25px">
+                <img style="width: 100px; margin-right: 50px;" src="https://www.w3schools.com/howto/img_avatar.png">
+                <h3 style="">Sma Wilcox&nbsp;&nbsp;</h3>
+            </div>
+        </a>
 </main>
