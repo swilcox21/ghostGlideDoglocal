@@ -56,13 +56,12 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed">
             {{#foreach posts}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{log posts}}
                 {{^has tag="project"}}
                     {{> "post-card"}}
                 {{/has}}
             {{/foreach}}
         </div>
-        {{log "logging an error" level="error"}}
+        {{log posts "posts"}}
     </div>
     <div style="border-bottom: 1px solid grey; margin: 50px"></div>
     <h2 style="text-align:center; margin-top:100px; margin-bottom:50px;">Meet the GlideDog Team</h2>
@@ -74,7 +73,7 @@ into the {body} of the default.hbs template --}}
         </a>
         <a href="/chaz/">
             <div style="display: flex; justify-content: center; margin-top: 25px">
-                <img style="width: 100px; margin-right: 50px;" src="https://www.w3schools.com/howto/img_avatar.png">
+                <img style="width: 100px; margin-right: 50px;" src="../../images/2022/06/favi.png">
                 <h3 style="">Chaz Chikeka</h3>
             </div>
         </a>
