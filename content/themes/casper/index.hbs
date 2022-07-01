@@ -2,6 +2,13 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
+{{!-- {{#foreach posts}}
+{{log this "hello"}}
+{{/foreach}} --}}
+{{#get "posts" filter="tag:project"}}
+{{log posts "goodbye"}}
+{{/get}}
+
 <div class="site-header-content outer{{#match @custom.header_style "Left aligned"}} left-aligned{{/match}}{{#unless @custom.show_publication_cover}}{{#match @custom.header_style "Hidden"}} no-content{{/match}}{{/unless}}">
 
     {{#if @custom.show_publication_cover}}
@@ -57,11 +64,23 @@ into the {body} of the default.hbs template --}}
             {{#foreach posts}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{^has tag="project"}}
+                {{^has tag="team-member"}}
                     {{> "post-card"}}
+                {{/has}}
                 {{/has}}
             {{/foreach}}
         </div>
-        {{log posts "posts"}}
+    </div>
+    <div style="border-bottom: 1px solid grey; margin: 50px"></div>
+    <div class="inner posts">
+        <h2 style="text-align:center">Meet the Glidedog Team</h2>
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{#has tag="team-member"}}
+                    {{> "member-card"}}
+                {{/has}}
+            {{/foreach}}
+        </div>
     </div>
     <div style="border-bottom: 1px solid grey; margin: 50px"></div>
     <h2 style="text-align:center; margin-top:100px; margin-bottom:50px;">Meet the GlideDog Team</h2>
@@ -73,7 +92,7 @@ into the {body} of the default.hbs template --}}
         </a>
         <a href="/chaz/">
             <div style="display: flex; justify-content: center; margin-top: 25px">
-                <img style="width: 100px; margin-right: 50px;" src="../../images/2022/06/favi.png">
+                <img style="width: 100px; margin-right: 50px;" src="https://github.com/swilcox21/ghostGlideDoglocal/blob/main/content/images/2022/06/favi.png?raw=true">
                 <h3 style="">Chaz Chikeka</h3>
             </div>
         </a>
