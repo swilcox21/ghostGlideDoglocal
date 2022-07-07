@@ -26,7 +26,7 @@ production stylesheet in assets/built/screen.css
 /* ---------------------------------------------------------- */
 
 /* Import CSS reset and base styles */
-@import 'global.css';
+@import "global.css";
 
 :root {
   /* Colours */
@@ -51,8 +51,9 @@ production stylesheet in assets/built/screen.css
      */
 
   /* Fonts */
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   --font-serif: Georgia, Times, serif;
   --font-mono: Menlo, Courier, monospace;
 }
@@ -215,7 +216,10 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
   font-size: 2.4rem;
 }
 
-.has-cover .site-header-content.left-aligned :is(.site-logo, .site-title) + .site-description {
+.has-cover
+  .site-header-content.left-aligned
+  :is(.site-logo, .site-title)
+  + .site-description {
   font-size: 2.2rem;
 }
 
@@ -439,7 +443,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
   left: 0;
   bottom: 0;
   margin: auto;
-  content: '';
+  content: "";
   width: 100%;
   height: 1px;
   background: currentcolor;
@@ -456,7 +460,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
   left: 0;
   bottom: 0;
   margin: auto;
-  content: '';
+  content: "";
   width: 100%;
   height: 1px;
   background: currentcolor;
@@ -596,6 +600,13 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
   grid-template-columns: repeat(6, 1fr);
   padding: max(4.8vmin, 36px) 0 0;
 }
+.project-feed {
+  position: relative;
+  display: list-item;
+  gap: 4.8vmin 4vmin;
+  grid-template-columns: repeat(6, 1fr);
+  padding: max(4.8vmin, 36px) 0 0;
+}
 
 :is(.tag-template, .author-template) .post-feed {
   margin-top: 4vmin;
@@ -631,23 +642,24 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .post-card-image-link::after {
-  content: '';
+  content: "";
   display: block;
   padding-bottom: 55%;
 }
 
-.post-card[class*='post-access-'] .post-card-image-link::after {
+.post-card[class*="post-access-"] .post-card-image-link::after {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
 }
 
-.post-card.keep-ratio[class*='post-access-'] .post-card-image-link::after {
+.post-card.keep-ratio[class*="post-access-"] .post-card-image-link::after {
   position: absolute;
   inset: 0;
   padding-bottom: 0;
 }
 
-.post-card.keep-ratio:not(.post-card-large):not(.post-card-full) .post-card-image-link::after {
+.post-card.keep-ratio:not(.post-card-large):not(.post-card-full)
+  .post-card-image-link::after {
   padding-bottom: 0;
 }
 
@@ -665,7 +677,8 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
   height: 10px;
 }
 
-.post-card.keep-ratio:not(.post-card-large):not(.post-card-full) .post-card-image {
+.post-card.keep-ratio:not(.post-card-large):not(.post-card-full)
+  .post-card-image {
   position: static;
 }
 
@@ -1149,7 +1162,7 @@ is the very first element in the post content */
 }
 
 .gh-content > blockquote:not([class])::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -1.5em;
   top: 0;
@@ -1353,8 +1366,18 @@ iframe.instagram-media + script + :not([id]) {
 
 .gh-content table {
   -webkit-overflow-scrolling: touch;
-  background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center,
-    radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+  background: radial-gradient(
+        ellipse at left,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0) 75%
+      )
+      0 center,
+    radial-gradient(
+        ellipse at right,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0) 75%
+      )
+      100% center;
   background-attachment: scroll, scroll;
   background-size: 10px 100%, 10px 100%;
   background-repeat: no-repeat;
@@ -1725,7 +1748,7 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .site-footer-nav li:not(:first-child) a:before {
-  content: '';
+  content: "";
   display: block;
   width: 2px;
   height: 2px;
@@ -1788,7 +1811,8 @@ html.dark-mode .post-card-image {
   background: var(--color-darkmode);
 }
 
-html.dark-mode :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content) {
+html.dark-mode
+  :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content) {
   color: color-mod(var(--color-secondary-text) l(-22%));
 }
 
@@ -1970,7 +1994,9 @@ html.dark-mode .footer-cta-title {
     background: var(--color-darkmode);
   }
 
-  html.auto-color :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content) {
+  html.auto-color
+    :is(.post-card-tags, .post-card-meta, .article-tag
+      a, .byline-meta-content) {
     color: color-mod(var(--color-secondary-text) l(-22%));
   }
 

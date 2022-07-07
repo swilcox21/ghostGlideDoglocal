@@ -1,0 +1,9 @@
+{"name":"Log","hostname":"DESKTOP-AK32FER","pid":9036,"level":30,"msg":"Ghost is running in production...","time":"2022-07-06T13:40:59.372Z","v":0}
+{"name":"Log","hostname":"DESKTOP-AK32FER","pid":9036,"level":30,"msg":"Your site is now available on http://localhost:2368/","time":"2022-07-06T13:40:59.374Z","v":0}
+{"name":"Log","hostname":"DESKTOP-AK32FER","pid":9036,"level":30,"msg":"Ctrl+C to shut down","time":"2022-07-06T13:40:59.375Z","v":0}
+{"name":"Log","hostname":"DESKTOP-AK32FER","pid":9036,"level":30,"msg":"Ghost server started in 1.564s","time":"2022-07-06T13:40:59.376Z","v":0}
+{"name":"Log","hostname":"DESKTOP-AK32FER","pid":9036,"level":50,"err":{"id":500,"domain":"http://localhost:2368","code":"ECONNREFUSED","name":"DatabaseError","statusCode":500,"level":"critical","message":"connect ECONNREFUSED 127.0.0.1:3306","help":"\"Unknown database error\"","stack":"Error: connect ECONNREFUSED 127.0.0.1:3306\n    at C:\\Projects\\ghostGlideDoglocal\\current\\node_modules\\knex-migrator\\lib\\database.js:57:19\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1161:16)","hideStack":false},"msg":"connect ECONNREFUSED 127.0.0.1:3306","time":"2022-07-06T13:40:59.861Z","v":0}
+{"name":"Log","hostname":"DESKTOP-AK32FER","pid":9036,"level":40,"msg":"Ghost is shutting down","time":"2022-07-06T13:40:59.863Z","v":0}
+{"name":"Log","hostname":"DESKTOP-AK32FER","pid":9036,"level":40,"msg":"Ghost has shut down","time":"2022-07-06T13:40:59.866Z","v":0}
+{"name":"Log","hostname":"DESKTOP-AK32FER","pid":9036,"level":40,"msg":"Your site is now offline","time":"2022-07-06T13:40:59.867Z","v":0}
+{"name":"Log","hostname":"DESKTOP-AK32FER","pid":9036,"level":40,"msg":"Ghost was running for a few seconds","time":"2022-07-06T13:40:59.870Z","v":0}
