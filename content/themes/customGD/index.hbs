@@ -83,13 +83,13 @@ into the {body} of the default.hbs template --}}
             {{/foreach}}
         </div>
     </div>
-    
+
     {{!-- TEAM-MEMBERS SECTION  --}}
 
     <div style="border-bottom: 1px solid grey; margin: 50px"></div>
-    <div class="inner posts">
+    <div class="">
         <h2 style="text-align:center">Meet the Glidedog Team</h2>
-        <div class="post-feed">
+        <div class="member-feed">
             {{#foreach posts}}
                 {{#has tag="team-member"}}
                     {{> "member-card"}}
